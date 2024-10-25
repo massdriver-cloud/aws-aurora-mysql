@@ -109,14 +109,14 @@ variable "vpc" {
 variable "parameter_groups" {
   type = object({
     cluster_parameters = optional(list(object({
-      apply_method = optional(string)
-      name         = optional(string)
-      value        = optional(string)
+      apply_method = string
+      name         = string
+      value        = string
     })))
     instance_parameters = optional(list(object({
-      apply_method = optional(string)
-      name         = optional(string)
-      value        = optional(string)
+      apply_method = string
+      name         = string
+      value        = string
     })))
   })
   default = null
