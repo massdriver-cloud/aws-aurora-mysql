@@ -1,4 +1,4 @@
-# AWS Aurora MySQL Runbook
+# AWS Aurora MySQL Guide
 
 Amazon Aurora is a fully managed relational database engine that's compatible with MySQL. This runbook will guide you through connecting to your Aurora MySQL cluster, troubleshooting common issues, and monitoring your database's performance.
 
@@ -27,7 +27,7 @@ Replace `<host>`, `<username>`, `<password>`, and `<database>` with your databas
 ### Connection Issues
 
 1. **Check Cluster Status**: Use the AWS CLI to check the cluster's status and ensure it is available:
-   
+
    ```sh
    aws rds describe-db-clusters --query "DBClusters[?DBClusterIdentifier=='<cluster_identifier>'].[Status, Endpoint, ReaderEndpoint]" --output table
    ```
