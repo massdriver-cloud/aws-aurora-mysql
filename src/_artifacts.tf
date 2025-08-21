@@ -35,9 +35,8 @@ locals {
 }
 
 resource "massdriver_artifact" "writer" {
-  field                = "writer"
-  provider_resource_id = aws_rds_cluster.main.arn
-  name                 = "MySQL Primary (writer): ${aws_rds_cluster.main.arn}"
+  field    = "writer"
+  name     = "MySQL Primary (writer): ${aws_rds_cluster.main.arn}"
   artifact = jsonencode(
     {
       data = {
