@@ -53,7 +53,6 @@ resource "massdriver_artifact" "writer" {
 
 resource "massdriver_artifact" "readers" {
   field                = "readers"
-  provider_resource_id = aws_rds_cluster.main.arn
   name                 = "MySQL Replicas (reader): ${aws_rds_cluster.main.arn}"
   artifact = jsonencode(
     {
