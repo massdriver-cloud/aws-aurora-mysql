@@ -20,7 +20,7 @@ resource "aws_security_group_rule" "vpc_ingress" {
   from_port   = local.mysql.port
   to_port     = local.mysql.port
   protocol    = local.mysql.protocol
-  cidr_blocks = [var.vpc.data.infrastructure.cidr]
+  cidr_blocks = [var.vpc.infrastructure.cidr]
 
   security_group_id = aws_security_group.main.id
 }
